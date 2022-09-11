@@ -1,0 +1,224 @@
+@import "../../../fluid-type.scss";
+.confirm__modal {
+  &__content {
+    transform: scale(0.4);
+
+    background: rgba(255, 255, 255, 0.8);
+    @include fluid-type(border-radius, 320px, 1920px, 20px, 60px);
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    @include fluid-type(max-width, 320px, 1920px, 232px, 745px);
+    @include fluid-type(max-height, 320px, 1920px, 160px, 475px);
+
+    @include fluid-type(padding-top padding-bottom, 320px, 1920px, 25px, 74px);
+    @include fluid-type(padding-left padding-right, 320px, 1920px, 5px, 74px);
+
+    transition: transform 0.4s ease;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    color: #912be2;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &.active {
+      transform: scale(1);
+    }
+
+    &__container {
+      width: 100%;
+    }
+
+    &__close-logo {
+      @include fluid-type(
+        height width border-radius,
+        320px,
+        1920px,
+        19px,
+        39px
+      );
+
+      background-color: #912be2;
+
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      transform: translate(25%, -25%);
+      & svg {
+        width: 50%;
+        height: 50%;
+      }
+    }
+    &__logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      transform: translate(-35%, -35%);
+
+      @include fluid-type(width height, 600px, 1920px, 50px, 97px);
+      @include fluid-type(border-radius, 600px, 1920px, 50px, 157px);
+      // background: #d92de4;
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25), 0px 0px 30px #912be2;
+    }
+    &__form {
+      width: 100%;
+      margin: 0 auto;
+
+      & h2 {
+        @include fluid-type(margin-bottom, 320px, 1920px, 28px, 64px);
+        @include fluid-type(font-size, 320px, 1920px, 12px, 28px);
+        text-transform: uppercase;
+      }
+      & a,
+      span {
+        color: #912be2;
+        @include fluid-type(font-size, 320px, 1920px, 10px, 27px);
+      }
+      &__element {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        margin: 10px 0;
+      }
+      & div:nth-child(2) {
+        margin-top: 0;
+      }
+      & div:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    
+    & button {
+      height: 100%;
+      border: none;
+      outline: none;
+    }
+    
+    & button {
+      width: 100%;
+      @include fluid-type(max-width, 320px, 1920px, 78px, 185px);
+      @include fluid-type(font-size, 320px, 1920px, 8px, 20px);
+      @include fluid-type(
+        border-radius,
+        320px,
+        1920px,
+        22px,
+        52px
+      );
+
+      font-weight: bold;
+      color: #fff;
+
+      cursor: pointer;
+
+      background: linear-gradient(90deg, #741bbb 0%, #801287 100%);
+    }
+    @media (max-width: 320px) {
+      font-size: 8px;
+    }
+  }
+
+  &__content_mobile {
+    transform: scale(0.4);
+
+    background: #d0d0d0;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    @include fluid-type(padding-top padding-bottom, 320px, 1920px, 25px, 74px);
+    @include fluid-type(padding-left padding-right, 320px, 1920px, 5px, 74px);
+
+    transition: transform 0.4s ease;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    color: #912be2;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &.active {
+      transform: scale(1);
+    }
+
+    &__container {
+      width: 100%;
+    }
+
+    &__arrow-back {
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
+      transform: translate(50%, 50%);
+
+      @include fluid-type(width height, 320px, 1920px, 24px, 48px);
+    }
+
+    &__form {
+      width: 100%;
+
+      @include fluid-type(max-width, 320px, 1920px, 260px, 350px);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      margin: 0 auto;
+      @include fluid-type(margin-bottom, 320px, 1920px, 32px, 80px);
+
+      & h2 {
+        @include fluid-type(margin-bottom, 320px, 1920px, 28px, 64px);
+        @include fluid-type(font-size, 320px, 1920px, 20px, 40px);
+        text-transform: uppercase;
+      }
+      & a,
+      span {
+        color: #912be2;
+        @include fluid-type(font-size, 320px, 1920px, 15px, 30px);
+      }
+      &__element {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        margin: 10px 0;
+      }
+      & div:nth-child(2) {
+        margin-top: 0;
+      }
+      & div:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

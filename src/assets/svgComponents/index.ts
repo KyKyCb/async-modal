@@ -1,0 +1,4 @@
+export {
+  CloseIcon
+} from './helpersLogos';
+

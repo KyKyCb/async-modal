@@ -1,0 +1,49 @@
+@import "./fluid-type.scss";
+.App {
+  // width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & button {
+    height: 100%;
+    border: none;
+    outline: none;
+  }
+
+  & button {
+    width: 100%;
+    @include fluid-type(max-width, 320px, 1920px, 78px, 185px);
+    @include fluid-type(font-size, 320px, 1920px, 8px, 20px);
+    @include fluid-type(border-radius, 320px, 1920px, 22px, 52px);
+
+    font-weight: bold;
+    color: #fff;
+
+    cursor: pointer;
+
+    background: linear-gradient(90deg, #741bbb 0%, #801287 100%);
+  }
+  @media (max-width: 320px) {
+    font-size: 8px;
+  }
+
+  &-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & button {
+      height: 50px;
+    }
+    & .message {
+      color: green;
+      &_error {
+        color: red;
+      }
+    }
+  }
+}
